@@ -33,7 +33,7 @@ const Home = () => {
               </li>)
           })}
       </ul>
-      <small>{toDo.length} tareas pendientes</small>
+      <small className="fw-light">{toDo.length} tareas pendientes</small>
     </div>
   );
 };
