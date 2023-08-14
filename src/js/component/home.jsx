@@ -1,8 +1,5 @@
 import React, { useState } from "react";
 
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
-
 //create your first component
 const Home = () => {
 
@@ -22,8 +19,8 @@ const Home = () => {
 
   return (
     <div className="w-50 mx-auto">
-      <h1 className="contatiner">To Do List</h1>
-      <input className="form-control" type="text" placeholder='¿Que tarea pendiente tenés?'
+      <h1 className="contatiner fw-light">To Do List</h1>
+      <input className="form-control fst-italic" type="text" placeholder='¿Que tarea pendiente tenés?'
         value={tarea}
         onChange={(e) => { setTarea(e.target.value) }}
         onKeyDown={add}/>
@@ -31,7 +28,7 @@ const Home = () => {
         {
           toDo.map((item, index) => {
             return (
-              <li className="list-group-item d-flex justify-content-between" key={index}>{item}
+              <li className="list-group-item d-flex justify-content-between fst-italic" key={index}>{item}
                 <i className="fa fa-trash" style={{color: '#c70000'}} onClick={() => del(index)}></i>
               </li>)
           })}
